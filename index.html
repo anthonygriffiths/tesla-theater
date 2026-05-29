@@ -23,16 +23,21 @@
             gap: 20px;
         }
         .btn {
-            background-color: #222;
-            border: 2px solid #444;
-            color: white;
-            padding: 30px 10px;
-            text-align: center;
-            text-decoration: none;
-            font-size: 18px;
-            border-radius: 12px;
-            transition: background 0.2s;
-        }
+    background-color: #222;
+    border: 2px solid #444;
+    color: white;
+    padding: 20px 10px; /* Reduced padding slightly to give images more breathing room */
+    text-align: center;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: background 0.2s;
+    
+    /* THE FIX: These 4 lines center your massive images perfectly */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box; 
+}
         .btn:hover { background-color: #333; border-color: #e81123; }
         .fullscreen-trigger {
             background-color: #e81123;
@@ -52,27 +57,27 @@
 
         <!-- YOUR SHORTCUTS (Will stay full-screen once triggered) -->
         <a class="btn" href="https://tv.apple.com" target="_self">
-    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/appletv.svg" alt="Apple TV+" style="height: 40px; filter: invert(1);">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/appletv.svg" alt="Apple TV+" style="height: 85px; filter: invert(1);">
 </a>
 
 <a class="btn" href="https://www.peacocktv.com" target="_self">
-    <img src="https://images.pluto.tv/channels/65790dcf14fbe40008701eda/colorLogoSVG.svg" alt="Peacock" style="height: 38px;">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/peacock.svg" alt="Peacock" style="height: 65px; filter: invert(1);">
 </a>
 
 <a class="btn" href="https://www.paramountplus.com" target="_self">
-    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/paramountplus.svg" alt="Paramount+" style="height: 35px; filter: invert(1);">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/paramountplus.svg" alt="Paramount+" style="height: 80px; filter: invert(1);">
 </a>
 
 <a class="btn" href="https://www.amazon.com/gp/video/storefront" target="_self">
-    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/primevideo.svg" alt="Amazon Prime" style="height: 32px; filter: invert(1);">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/primevideo.svg" alt="Amazon Prime" style="height: 70px; filter: invert(1);">
 </a>
 
 <a class="btn" href="https://www.willowtv.com" target="_self">
-    <span style="font-family: 'Arial Black', sans-serif; font-size: 26px; color: #00A859; letter-spacing: -1px;">WILLOW</span>
+    <span style="font-family: 'Arial Black', Impact, sans-serif; font-size: 42px; color: #00A859; letter-spacing: -2px; font-weight: 900;">WILLOW</span>
 </a>
 
 <a class="btn" href="https://tv.youtube.com" target="_self">
-    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtubetv.svg" alt="YouTube TV" style="height: 32px; filter: invert(1);">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtubetv.svg" alt="YouTube TV" style="height: 65px; filter: invert(1);">
 </a>
         
     </div>
