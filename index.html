@@ -5,116 +5,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Griffiths Tesla Hub</title>
     <style>
-    body {
-        background-color: #111;
-        color: white;
-        font-family: system-ui, sans-serif;
-        margin: 0;
-        padding: 40px 20px;
-        
-        /* Centering the entire page wrapper horizontally */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        min-height: 100vh;
-        box-sizing: border-box;
-    }
+        body {
+            background-color: #111;
+            color: white;
+            font-family: system-ui, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            
+            /* Centering the entire page wrapper horizontally */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
 
-    h1 { 
-        margin-bottom: 30px; 
-        font-weight: 400; 
-        text-align: center;
-    }
+        h1 { 
+            margin-bottom: 30px; 
+            font-weight: 400; 
+            text-align: center;
+        }
 
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(3, 180px);
-        gap: 20px;
-        justify-content: center;
-    }
-        .fullscreen-trigger {
-    grid-column: span 3;
-    background-color: #d32f2f;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 180px);
+            gap: 20px;
+            justify-content: center;
+        }
 
-    /* THE FIX: Forces the Full Screen button to span all 3 columns at the top */
-    .fullscreen-trigger {
-        grid-column: span 3;
-        background-color: #d32f2f; /* Premium Tesla Red */
-        font-weight: bold;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
-    
-    .fullscreen-trigger:hover {
-        background-color: #b71c1c;
-    }
-</style>
         .btn {
-    background-color: #222;
-    border: 2px solid #444;
-    color: white;
-    padding: 20px 10px; /* Reduced padding slightly to give images more breathing room */
-    text-align: center;
-    text-decoration: none;
-    border-radius: 12px;
-    transition: background 0.2s;
-    
-    /* THE FIX: These 4 lines center your massive images perfectly */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box; 
-}
-        .btn:hover { background-color: #333; border-color: #e81123; }
+            background-color: #222;
+            border: 2px solid #444;
+            color: white;
+            padding: 20px 10px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 12px;
+            transition: background 0.2s, border-color 0.2s;
+            
+            /* Center images/text inside the button */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box; 
+        }
+
+        .btn:hover { 
+            background-color: #333; 
+            border-color: #e81123; 
+        }
+
         .fullscreen-trigger {
-            background-color: #e81123;
             grid-column: span 3;
+            background-color: #e81123; /* Tesla Red */
             font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             border: none;
+            height: 50px;
+        }
+
+        .fullscreen-trigger:hover {
+            background-color: #b71c1c;
         }
     </style>
 </head>
 <body>
 
-   <h1>Tesla Media Launcher</h1>
+    <h1>Tesla Media Launcher</h1>
 
-<div style="text-align: center; margin-bottom: 25px;">
-    <img src="family.jpg" alt="Our Family" style="width: 100%; max-width: 580px; height: auto; border-radius: 12px; border: 2px solid #444;">
-</div>
+    <div style="text-align: center; margin-bottom: 25px;">
+        <img src="family.jpg" alt="Our Family" style="width: 100%; max-width: 580px; height: auto; border-radius: 12px; border: 2px solid #444;">
+    </div>
 
-<div class="grid">
-    
-    <a class="btn fullscreen-trigger" href="https://www.youtube.com/redirect?q=https://thefamilygriffiths.com?reload=1">⚡ GO FULL SCREEN ⚡</a>
-    
-    <a class="btn" href="https://tv.apple.com" target="_self">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/appletv.svg" alt="Apple TV+" style="height: 65px; filter: invert(1);">
-    </a>
-    
-    <a class="btn" href="https://www.peacocktv.com" target="_self">
-        <img src="peacock.svg" alt="Peacock" style="height: 50px;">
-    </a>
-    
-    <a class="btn" href="https://www.paramountplus.com" target="_self">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/paramountplus.svg" alt="Paramount+" style="height: 60px; filter: invert(1);">
-    </a>
-    
-    <a class="btn" href="https://www.amazon.com/gp/video/storefront" target="_self">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/primevideo.svg" alt="Amazon Prime" style="height: 50px; filter: invert(1);">
-    </a>
-    
-    <a class="btn" href="https://www.willowtv.com" target="_self">
-        <span style="font-family: 'Arial Black', Impact, sans-serif; font-size: 32px; color: #00A859; letter-spacing: -2px; font-weight: 900;">WILLOW</span>
-    </a>
-    
-    <a class="btn" href="https://tv.youtube.com" target="_self">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtubetv.svg" alt="YouTube TV" style="height: 48px; filter: invert(1);">
-    </a>
+    <div class="grid">
+        
+        <a class="btn fullscreen-trigger" href="https://www.youtube.com/redirect?q=https://thefamilygriffiths.com?reload=1">⚡ GO FULL SCREEN ⚡</a>
+        
+        <a class="btn" href="https://tv.apple.com" target="_self">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/appletv.svg" alt="Apple TV+" style="height: 65px; filter: invert(1);">
+        </a>
+        
+        <a class="btn" href="https://www.peacocktv.com" target="_self">
+            <img src="peacock.svg" alt="Peacock" style="height: 50px;">
+        </a>
+        
+        <a class="btn" href="https://www.paramountplus.com" target="_self">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/paramountplus.svg" alt="Paramount+" style="height: 60px; filter: invert(1);">
+        </a>
+        
+        <a class="btn" href="https://www.amazon.com/gp/video/storefront" target="_self">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/primevideo.svg" alt="Amazon Prime" style="height: 50px; filter: invert(1);">
+        </a>
+        
+        <a class="btn" href="https://www.willowtv.com" target="_self">
+            <span style="font-family: 'Arial Black', Impact, sans-serif; font-size: 32px; color: #00A859; letter-spacing: -2px; font-weight: 900;">WILLOW</span>
+        </a>
+        
+        <a class="btn" href="https://tv.youtube.com" target="_self">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtubetv.svg" alt="YouTube TV" style="height: 48px; filter: invert(1);">
+        </a>
 
-</div>
+    </div>
 
 </body>
 </html>
